@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.entity.calculadora;
+package br.com.livreprogramacao.calculadora;
 
 import br.com.livreprogramacao.entity.ticket.Ticket;
 import br.com.livreprogramacao.entity.marca.Marca;
@@ -10,6 +10,7 @@ public class CalculadoraMarcaEstacionamento implements CalculadoraEstacionamento
 	}
 
 	public Integer calcularValorPorMarca(Marca marca) {
+		System.out.println("quando for marca FORD o valor é 10;");
 		return 10;	
 	}
 }

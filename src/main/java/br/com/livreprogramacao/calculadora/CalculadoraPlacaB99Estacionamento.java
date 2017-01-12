@@ -1,8 +1,6 @@
-package br.com.livreprogramacao.entity.calculadora;
+package br.com.livreprogramacao.calculadora;
 
 import br.com.livreprogramacao.entity.ticket.Ticket;
-import br.com.livreprogramacao.entity.marca.Marca;
-import br.com.livreprogramacao.entity.modelo.Modelo;
 
 public class CalculadoraPlacaB99Estacionamento implements CalculadoraEstacionamento {
 
@@ -11,6 +9,7 @@ public class CalculadoraPlacaB99Estacionamento implements CalculadoraEstacioname
 	}
 
 	public Integer calcularValorPorPlacaB99(String placa) {
+		System.out.println("quando a placa contem B e termina com 99 o valor é 1;");
 		return 1;	
 	}
 }
