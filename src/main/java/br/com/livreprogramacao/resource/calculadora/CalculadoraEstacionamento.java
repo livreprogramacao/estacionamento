@@ -11,7 +11,7 @@ import javax.ws.rs.Path;
  * @author user
  */
 @Path("calculadora")
-public class CalculadoraTarifa {
+public class CalculadoraEstacionamento {
     
     @GET
     public String valor() {

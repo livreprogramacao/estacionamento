@@ -4,6 +4,7 @@ import br.com.livreprogramacao.entity.ticket.Ticket;
 
 public class CalculadoraPlacaB99Estacionamento implements CalculadoraEstacionamento {
 
+    @Override
 	public Integer resultado(Ticket ticket) {
 		return calcularValorPorPlacaB99(ticket.getPlaca());
 	}

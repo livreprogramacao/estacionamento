@@ -5,6 +5,7 @@ import br.com.livreprogramacao.entity.marca.Marca;
 
 public class CalculadoraMarcaEstacionamento implements CalculadoraEstacionamento {
 
+    @Override
 	public Integer resultado(Ticket ticket) {
 		return calcularValorPorMarca(ticket.getMarca());
 	}
