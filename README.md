@@ -76,3 +76,6 @@ curl -i http://localhost:8080/api-estacionamento-rest/resources/calculadora
 ```
 curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
 ```
+
+
+[https://sourcemaking.com/design_patterns/template_method/java/2](https://sourcemaking.com/design_patterns/template_method/java/2)
