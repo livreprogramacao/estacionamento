@@ -23,11 +23,10 @@ quanto a entrada dos dados e a saída utilizaram Web Services.
 ### Configure Wildfly
 =====
 ```
-chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
 export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
+chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
 $JBOSS_HOME/bin/add-user.sh
 ```
-
 
 #### Copy eclipseLink to modules
 ===
@@ -47,6 +46,12 @@ Open /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/pers
             </filter>
         </resource-root>
     </resources>
+```
+
+#### Run JBoss
+====
+```
+$JBOSS_HOME/bin/standalone.sh
 ```
 
 ####  Add datasource via jboss-cli
