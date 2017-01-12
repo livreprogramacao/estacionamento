@@ -63,7 +63,7 @@ public abstract class EntityBase implements Serializable {
 
     @Override  
     public String toString() {  
-        return String.format("%s [id=%i]", this.getClass().getName(), id);  
+        return String.format("%s [id=%s]", this.getClass().getName(), id);  
     } 
     
 }
