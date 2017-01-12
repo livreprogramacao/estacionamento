@@ -1,7 +1,7 @@
-package br.com.livreprogramacao.calculadora;
+package br.com.livreprogramacao.resource.calculadora;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
 /**
@@ -13,11 +13,11 @@ import javax.ws.rs.Path;
 public class CalculadoraTarifa {
     
     @GET
-    public String total() {
-        return "10";
+    public String valor() {
+        return "5"; // demais marcas e modelos o valor é 5;
     }
     
-    @PUT
+    @POST
     public void calcularValor() {
         
     }

@@ -21,3 +21,8 @@ quanto a entrada dos dados e a saída utilizaram Web Services.
 
 
 
+Access:
+
+curl http://localhost:8080/api-estacionamento-rest/resources/calculadora
+curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
+
