@@ -34,6 +34,11 @@ public class Ticket extends EntityBase {
         this.placa = placa;
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" + "numero=" + numero + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + '}';
+    }
+
     public String getNumero() {
         return numero;
     }
