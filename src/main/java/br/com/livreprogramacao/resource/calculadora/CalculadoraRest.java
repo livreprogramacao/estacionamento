@@ -18,25 +18,25 @@ import javax.ws.rs.Path;
 @Path("calculadora")
 public class CalculadoraRest {
     
-    private String valor;
+    private Integer valor;
     
     @GET
-    public String valor() {
+    public Integer valor() {
         return valor; // demais marcas e modelos o valor é 5;
     }
     
     @POST
     public void calcularValor(Ticket ticket) {
-        valor = executarCalculadora(ticket);
+        executarCalculadora(ticket);
     }
 
-    private String executarCalculadora(@Valid Ticket ticket) {
-        System.out.format("Debug -- %s", ticket);
+    private void executarCalculadora(@Valid Ticket ticket) {
         Integer valor1 = new CalculadoraMarcaEstacionamento().resultado(ticket);
         Integer valor2 = new CalculadoraMarcaModeloEstacionamento().resultado(ticket);
         Integer valor3 = new CalculadoraPlacaB99Estacionamento().resultado(ticket);
         Integer valor4 = new CalculadoraOutrosEstacionamento().resultado(ticket);
-        return valor1+valor2+valor3+valor4+"";
+        valor = valor1+valor2+valor3+valor4;
+        System.out.format("Debug -- valor cobrado R$ %s para o Ticket %s", valor, ticket);
     }
 
 }
