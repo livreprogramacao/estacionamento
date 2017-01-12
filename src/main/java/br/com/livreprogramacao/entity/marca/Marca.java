@@ -1,11 +1,13 @@
 package br.com.livreprogramacao.entity.marca;
 
 import br.com.livreprogramacao.entity.base.EntityBase;
+import javax.persistence.Entity;
 
 /**
  *
  * @author user
  */
+@Entity
 public class Marca extends EntityBase {
 
     private String nome;
