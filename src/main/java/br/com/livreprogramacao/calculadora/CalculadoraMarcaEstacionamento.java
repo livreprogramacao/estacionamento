@@ -12,6 +12,6 @@ public class CalculadoraMarcaEstacionamento implements CalculadoraEstacionamento
 
 	public Integer calcularValorPorMarca(Marca marca) {
 		System.out.println("quando for marca FORD o valor é 10;");
-		return 10;	
+        return "FORD".equalsIgnoreCase(marca.getNome()) ? 10 : 0;
 	}
 }

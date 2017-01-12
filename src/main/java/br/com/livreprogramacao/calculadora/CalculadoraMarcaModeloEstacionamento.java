@@ -13,6 +13,6 @@ public class CalculadoraMarcaModeloEstacionamento implements CalculadoraEstacion
 
 	public Integer calcularValorPorMarcaModelo(Marca marca, Modelo modelo) {
 		System.out.println("quando for GM e o modelo for BLAZER o valor é 20;");
-		return 20;	
+		return "GM".equalsIgnoreCase(marca.getNome()) && "BLAZER".equalsIgnoreCase(modelo.getNome()) ? 20:0;	
 	}
 }
