@@ -3,9 +3,9 @@ package br.com.livreprogramacao.entity.ticket;
 import br.com.livreprogramacao.entity.base.EntityBase;
 import br.com.livreprogramacao.entity.marca.Marca;
 import br.com.livreprogramacao.entity.modelo.Modelo;
-import java.util.Objects;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -16,8 +16,10 @@ public class Ticket extends EntityBase {
 
     private String numero;
     
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Marca marca;
 
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Modelo modelo;
 
     private String placa;
