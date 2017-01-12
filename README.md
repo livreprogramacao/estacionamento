@@ -21,11 +21,27 @@ quanto a entrada dos dados e a saída utilizaram Web Services.
 
 
 setup wildfly:
-cp /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main/eclipselink.jar
+
+Add eclipseLink:
+cp ~/Downloads/eclipselink.jar /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main
+Add in /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main/module.xml
+```
+    <resources>
+        <resource-root path="jipijapa-eclipselink-10.1.0.Final.jar"/>
+        <resource-root path="eclipselink.jar">
+            <filter>
+                <exclude path="javax/**" />
+            </filter>
+        </resource-root>
+    </resources>
+```
+
 chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
 export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
 $JBOSS_HOME/bin/add-user.sh
-$JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true"
+$JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true;sql.syntax_mys=true;"
+
+execute maven:
 mvn package && cp target/api-estacionamento-rest.war ~/wildfly-10.1.0.Final/standalone/deployments/
 
 
