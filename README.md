@@ -19,11 +19,12 @@ A massa de dados não precisa ser todas as marcas e modelos somente 5 marcas com
 Toda interação com o sistema será feito por Web Services Restfull, ou seja, 
 quanto a entrada dos dados e a saída utilizaram Web Services.
 
+
 setup wildfly:
 export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
 $JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true"
 
+
 access the url:
 curl http://localhost:8080/api-estacionamento-rest/resources/calculadora
 curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
-
