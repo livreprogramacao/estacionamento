@@ -20,12 +20,25 @@ Toda interação com o sistema será feito por Web Services Restfull, ou seja,
 quanto a entrada dos dados e a saída utilizaram Web Services.
 
 
+### Configure Wildfly
+=====
 ```
-setup wildfly:
+chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
+export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
+$JBOSS_HOME/bin/add-user.sh
+```
 
-Add eclipseLink:
+
+#### Copy eclipseLink to modules
+===
+```
 cp ~/Downloads/eclipselink.jar /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main
-Add in /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main/module.xml
+```
+
+#### Edit module.xml
+===
+Open /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main/module.xml
+```
     <resources>
         <resource-root path="jipijapa-eclipselink-10.1.0.Final.jar"/>
         <resource-root path="eclipselink.jar">
@@ -34,18 +47,27 @@ Add in /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/pe
             </filter>
         </resource-root>
     </resources>
+```
 
-chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
-export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
-$JBOSS_HOME/bin/add-user.sh
+####  Add datasource via jboss-cli
+===
+```
 $JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true;sql.syntax_mys=true;"
+```
 
-execute maven:
+#### Run maven:
+===
+```
 mvn package && cp target/api-estacionamento-rest.war ~/wildfly-10.1.0.Final/standalone/deployments/
 ```
 
 
-access the url:
+#### Test the app:
+====
+```
 curl -i http://localhost:8080/api-estacionamento-rest/resources/calculadora
-curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
+```
 
+```
+curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
+```
