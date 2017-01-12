@@ -1,5 +1,6 @@
 package br.com.livreprogramacao.resource.calculadora;
 
+import br.com.livreprogramacao.entity.ticket.Ticket;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -18,7 +19,7 @@ public class CalculadoraTarifa {
     }
     
     @POST
-    public void calcularValor() {
+    public void calcularValor(Ticket ticket) {
         
     }
 
