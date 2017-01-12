@@ -19,9 +19,9 @@ import static org.hamcrest.CoreMatchers.containsString;
  */
 public class CalculadoraTarifaTest {
     
+    private Client client;
     private final String URI = "http://localhost:8080/api-estacionamento-rest/resources/calculadora";
     private String valor;
-    private Client client;
     
     @Before
     public void setUp() {
@@ -34,7 +34,7 @@ public class CalculadoraTarifaTest {
     }
     
     @Test
-    public void testEndpoint() {
+    public void testTicketParaOutrasMarcasModelos() {
         String result = client.target(URI).
                 request().
                 get(String.class);
