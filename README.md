@@ -23,9 +23,10 @@ quanto a entrada dos dados e a saída utilizaram Web Services.
 ### Configure Wildfly
 =====
 ```
-export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
+unzip  ~/Downloads/wildfly-10.1.0.Final.zip -d /home/user
 chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
-$JBOSS_HOME/bin/add-user.sh
+export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
+$JBOSS_HOME/bin/add-user.sh admin admin
 ```
 
 #### Copy eclipseLink to modules
@@ -63,6 +64,8 @@ $JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add -
 #### Run maven:
 ===
 ```
+mvn clean install wildfly:deploy
+
 mvn package && cp target/api-estacionamento-rest.war ~/wildfly-10.1.0.Final/standalone/deployments/
 ```
 
