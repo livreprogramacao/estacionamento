@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 public class Ticket extends EntityBase {
 
     private String numero;
-    
+
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Marca marca;
 
@@ -70,5 +70,5 @@ public class Ticket extends EntityBase {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
-    
+
 }

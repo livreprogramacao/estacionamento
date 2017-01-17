@@ -26,6 +26,13 @@ public abstract class EntityBase implements Serializable {
     @Version
     private Long version;
 
+    public EntityBase() {
+    }
+
+    public EntityBase(final Long _id) {
+        this.id = _id;
+    }
+
     public Long getId() {
         return id;
     }
@@ -61,9 +68,9 @@ public abstract class EntityBase implements Serializable {
         return true;
     }
 
-    @Override  
-    public String toString() {  
-        return String.format("%s [id=%s]", this.getClass().getName(), id);  
-    } 
-    
+    @Override
+    public String toString() {
+        return String.format("%s [id=%s]", this.getClass().getName(), id);
+    }
+
 }

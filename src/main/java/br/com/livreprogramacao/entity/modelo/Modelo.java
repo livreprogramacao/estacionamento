@@ -15,7 +15,8 @@ public class Modelo extends EntityBase {
     public Modelo() {
     }
 
-    public Modelo(String nome) {
+    public Modelo(final Long _id, final String nome) {
+        super(_id);
         this.nome = nome;
     }
 
@@ -28,8 +29,8 @@ public class Modelo extends EntityBase {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
-    
+
 }

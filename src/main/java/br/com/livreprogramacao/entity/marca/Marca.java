@@ -15,7 +15,8 @@ public class Marca extends EntityBase {
     public Marca() {
     }
 
-    public Marca(String nome) {
+    public Marca(final Long _id, final String nome) {
+        super(_id);
         this.nome = nome;
     }
 
@@ -28,7 +29,7 @@ public class Marca extends EntityBase {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
 
