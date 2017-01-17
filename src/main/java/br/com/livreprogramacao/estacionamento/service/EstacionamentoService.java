@@ -48,16 +48,18 @@ public class EstacionamentoService {
         return ticketCollection;
     }
 
-    public void add(Ticket resource) {
+    public Ticket add(Ticket resource) {
         System.out.println("Resource Ticket added!");
+        return resource;
     }
 
     public void delete(Ticket resource) {
         System.out.println("Resource Ticket deleted!");
     }
 
-    public void update(Ticket resource) {
+    public Ticket update(Ticket resource) {
         System.out.println("Resource Ticket updated!");
+        return resource;
     }
     
     public void calcularValor(Ticket ticket) {

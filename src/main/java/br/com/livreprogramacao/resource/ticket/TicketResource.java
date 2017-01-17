@@ -40,7 +40,7 @@ public class TicketResource {
 
     @PUT
     public Ticket update(@Valid Ticket resource) {
-        service.update(resource);
+        resource = service.update(resource);
         return resource;
     }
 
