@@ -17,7 +17,7 @@ public class MarcaRepositoryTest {
     
     private static final String DRIVER_CLASS_NAME = "org.hsqldb.jdbcDriver";
     private static final String PERSISTENCE = "persistence.xml";
-    private static final String PU_NAME = "teste";
+    private static final String PU_NAME = "hsqldb";
     
     
     @Test
