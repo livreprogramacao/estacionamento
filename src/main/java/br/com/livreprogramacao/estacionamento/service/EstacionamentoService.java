@@ -64,7 +64,7 @@ public class EstacionamentoService {
         executarCalculadora(ticket);
     }
 
-    private void executarCalculadora(@Valid Ticket ticket) {
+    private void executarCalculadora(Ticket ticket) {
         Integer valor1 = new CalculadoraMarcaEstacionamento().resultado(ticket);
         Integer valor2 = new CalculadoraMarcaModeloEstacionamento().resultado(ticket);
         Integer valor3 = new CalculadoraPlacaB99Estacionamento().resultado(ticket);
