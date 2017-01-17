@@ -19,33 +19,23 @@ public abstract class EntityBase implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id", nullable = false, columnDefinition = "BIGINT UNSIGNED")
+    @Column(name = "id", nullable = false)
     protected Long id;
 
-    @Column(name = "version")
+    @Column(name = "optlock", columnDefinition = "integer DEFAULT 0", nullable = false)
     @Version
-    private Long version;
+    private Long version = 0L; // Field version cannot be final.
 
-    public EntityBase() {
-    }
+    protected EntityBase() {}
 
-    public EntityBase(final Long _id) {
+    protected EntityBase(final Long _id) {
         this.id = _id;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public Long getVersion() {
-        return version;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (this.getId() != null ? this.getId().hashCode() : 0);
-
         return hash;
     }
 
@@ -71,6 +61,14 @@ public abstract class EntityBase implements Serializable {
     @Override
     public String toString() {
         return String.format("%s [id=%s]", this.getClass().getName(), id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getVersion() {
+        return version;
     }
 
 }
