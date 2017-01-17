@@ -4,6 +4,9 @@ import br.com.livreprogramacao.entity.ticket.Ticket;
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
 import javax.validation.Valid;
 import java.util.List;
+import javax.ws.rs.Produces;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.core.MediaType;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -12,11 +15,13 @@ import javax.ws.rs.DELETE;
 import javax.ws.rs.Path;
 
 /**
- * Implementa as regras de negócios de um estacionamento.
+ * Implementa as regras de negócios do estacionamento.
  *
  * @author user
  */
 @Path("tickets")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class TicketResource {
 
     @Inject
