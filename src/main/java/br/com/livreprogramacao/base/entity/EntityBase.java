@@ -11,7 +11,7 @@ import javax.persistence.Version;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @MappedSuperclass
 public abstract class EntityBase implements Serializable {

@@ -32,6 +32,7 @@ public class EstacionamentoService {
         String placa = "HJK-7858";
         Ticket ticketBlazer = new Ticket(ticketId, chevrolet, blazer, placa);
         ticketCollection.add(ticketBlazer);
+
     }
 
     public List<Marca> getMarcas() {
@@ -49,6 +50,7 @@ public class EstacionamentoService {
 
     public Ticket add(Ticket resource) {
         System.out.println("Resource Ticket added!");
+        calcularValorEstadia(resource);
         return resource;
     }
 
@@ -61,16 +63,13 @@ public class EstacionamentoService {
         return resource;
     }
     
-    public void calcularValor(Ticket ticket) {
-        executarCalculadora(ticket);
-    }
-
-    private void executarCalculadora(Ticket ticket) {
-        Integer valor1 = new CalculadoraMarcaEstacionamento().resultado(ticket);
-        Integer valor2 = new CalculadoraMarcaModeloEstacionamento().resultado(ticket);
-        Integer valor3 = new CalculadoraPlacaB99Estacionamento().resultado(ticket);
-        Integer valor4 = new CalculadoraOutrosEstacionamento().resultado(ticket);
-        Integer valor = valor1+valor2+valor3+valor4;
+    private void calcularValorEstadia(Ticket ticket) {
+        Integer valor = 0;
+        
+        valor = valor > 0 ? valor : new CalculadoraMarcaEstacionamento().resultado(ticket);
+        valor = valor > 0 ? valor : new CalculadoraMarcaModeloEstacionamento().resultado(ticket);
+        valor = valor > 0 ? valor : new CalculadoraPlacaB99Estacionamento().resultado(ticket);
+        valor = valor > 0 ? valor : new CalculadoraOutrosEstacionamento().resultado(ticket);
         System.out.format("Debug -- valor cobrado R$ %s para o Ticket %s", valor, ticket);
     }
     

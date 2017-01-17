@@ -7,7 +7,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 public class MarcaRepository {
 

@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @Entity
 public class Marca extends EntityBase {

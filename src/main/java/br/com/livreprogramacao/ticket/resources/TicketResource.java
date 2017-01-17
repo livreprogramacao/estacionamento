@@ -17,7 +17,7 @@ import javax.ws.rs.Path;
 /**
  * Implementa as regras de negócios do estacionamento.
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @Path("tickets")
 @Produces(MediaType.APPLICATION_JSON)

@@ -8,7 +8,7 @@ import org.junit.Test;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 public class MarcaRepositoryTest {
 

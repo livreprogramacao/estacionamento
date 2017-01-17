@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @Entity
 public class Ticket extends EntityBase {

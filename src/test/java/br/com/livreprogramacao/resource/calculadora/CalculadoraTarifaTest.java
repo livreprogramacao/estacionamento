@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 public class CalculadoraTarifaTest {
     

@@ -6,7 +6,7 @@ import javax.ws.rs.core.Application;
 /**
  * Configures a JAX-RS endpoint.
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @ApplicationPath("estacionamento")
 public class JAXRSConfiguration extends Application {

@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author user
+ * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 @Path("modelos")
 @Produces(MediaType.APPLICATION_JSON)
