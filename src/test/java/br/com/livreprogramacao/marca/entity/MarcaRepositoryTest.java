@@ -22,7 +22,7 @@ public class MarcaRepositoryTest {
     
     @Test
     public void checkThereIsPersistenceTest() {
-        assertTrue("Not Found Persistence.xml file", getClass().getResource(PERSISTENCE) != null);
+        assertTrue("Not Found src/test/resources/META-INF/persistence.xml file", getClass().getResource(PERSISTENCE) != null);
     }
     
     @Test
