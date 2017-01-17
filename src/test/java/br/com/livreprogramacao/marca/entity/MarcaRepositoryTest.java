@@ -1,9 +1,12 @@
 package br.com.livreprogramacao.marca.entity;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
@@ -11,10 +14,29 @@ import org.junit.Test;
  * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
 public class MarcaRepositoryTest {
+    
+    private static final String DRIVER_CLASS_NAME = "org.hsqldb.jdbcDriver";
+    private static final String PERSISTENCE = "META-INF/persistence.xml";
+    private static final String PU_NAME = "default";
+    
+    
+    @Test
+    public void checkThereIsPersistenceTest() {
+        assertTrue("Found persistence.xml", getClass().getResource(PERSISTENCE) != null);
+    }
+    
+    @Test
+    public void checkThereIsDriverClassNameTest() {
+        try {
+            assertTrue("HSQLDB Class", getClass().forName(DRIVER_CLASS_NAME) != null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MarcaRepositoryTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     @Test
     public void marcaCreateNewResourceTest() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
