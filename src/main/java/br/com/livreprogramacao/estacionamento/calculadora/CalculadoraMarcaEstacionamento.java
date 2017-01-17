@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.calculadora;
+package br.com.livreprogramacao.estacionamento.calculadora;
 
 import br.com.livreprogramacao.marca.entity.Marca;
 import br.com.livreprogramacao.ticket.entity.Ticket;

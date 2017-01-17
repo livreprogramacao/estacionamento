@@ -1,9 +1,9 @@
 package br.com.livreprogramacao.estacionamento.service;
 
-import br.com.livreprogramacao.calculadora.CalculadoraMarcaEstacionamento;
-import br.com.livreprogramacao.calculadora.CalculadoraMarcaModeloEstacionamento;
-import br.com.livreprogramacao.calculadora.CalculadoraOutrosEstacionamento;
-import br.com.livreprogramacao.calculadora.CalculadoraPlacaB99Estacionamento;
+import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraMarcaEstacionamento;
+import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraMarcaModeloEstacionamento;
+import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraOutrosEstacionamento;
+import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraPlacaB99Estacionamento;
 import br.com.livreprogramacao.marca.entity.Marca;
 import br.com.livreprogramacao.modelo.entity.Modelo;
 import br.com.livreprogramacao.ticket.entity.Ticket;
