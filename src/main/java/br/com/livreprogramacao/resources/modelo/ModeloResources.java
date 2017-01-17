@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.resources.marca;
+package br.com.livreprogramacao.resources.modelo;
 
 import br.com.livreprogramacao.entity.modelo.Modelo;
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
@@ -11,14 +11,14 @@ import javax.ws.rs.Path;
  *
  * @author user
  */
-@Path("marcas")
-public class MarcaResources {
+@Path("modelos")
+public class ModeloResources {
     
     @Inject
     EstacionamentoService service;
 
     @GET
-    public List<Modelo> getModelos() {
+    public List<Modelo> getModelo() {
         return service.getModelos();
     }
 
