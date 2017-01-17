@@ -6,6 +6,8 @@ import br.com.livreprogramacao.entity.modelo.Modelo;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -16,12 +18,16 @@ public class Ticket extends EntityBase {
 
     private String numero;
 
+    @NotNull(message = "Por gentileza, informe a Marca!")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Marca marca;
 
+    @NotNull(message = "Por gentileza, informe o Modelo!")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Modelo modelo;
 
+    @NotNull(message = "Por gentileza, informe a Placa!")
+    @Size(min = 8, max = 8)
     private String placa;
 
     public Ticket() {
