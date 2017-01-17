@@ -12,15 +12,15 @@ import org.junit.Test;
  * @author user
  */
 public class MarcaRepositoryTest {
-    
+
     @Test
-    public void mappingSmokeTest() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("test");
+    public void marcaCreateNewResourceTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         em.persist(new Marca(-1L, "MarcaIndefinida!"));
         tx.commit();
     }
- 
+
 }
