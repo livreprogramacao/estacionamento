@@ -1,7 +1,7 @@
 package br.com.livreprogramacao.resource.ticket;
 
-import br.com.livreprogramacao.entity.ticket.Ticket;
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
+import br.com.livreprogramacao.ticket.entity.Ticket;
 import javax.validation.Valid;
 import java.util.List;
 import javax.ws.rs.Produces;

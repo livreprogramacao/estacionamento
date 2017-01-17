@@ -4,12 +4,11 @@ import br.com.livreprogramacao.calculadora.CalculadoraMarcaEstacionamento;
 import br.com.livreprogramacao.calculadora.CalculadoraMarcaModeloEstacionamento;
 import br.com.livreprogramacao.calculadora.CalculadoraOutrosEstacionamento;
 import br.com.livreprogramacao.calculadora.CalculadoraPlacaB99Estacionamento;
-import br.com.livreprogramacao.entity.marca.Marca;
-import br.com.livreprogramacao.entity.modelo.Modelo;
-import br.com.livreprogramacao.entity.ticket.Ticket;
+import br.com.livreprogramacao.marca.entity.Marca;
+import br.com.livreprogramacao.modelo.entity.Modelo;
+import br.com.livreprogramacao.ticket.entity.Ticket;
 import java.util.ArrayList;
 import java.util.List;
-import javax.validation.Valid;
 
 public class EstacionamentoService {
 

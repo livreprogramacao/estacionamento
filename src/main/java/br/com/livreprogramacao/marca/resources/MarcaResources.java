@@ -1,7 +1,7 @@
-package br.com.livreprogramacao.resources.marca;
+package br.com.livreprogramacao.marca.resources;
 
-import br.com.livreprogramacao.entity.marca.Marca;
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
+import br.com.livreprogramacao.marca.entity.Marca;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;

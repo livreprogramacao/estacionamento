@@ -1,8 +1,8 @@
-package br.com.livreprogramacao.entity.ticket;
+package br.com.livreprogramacao.ticket.entity;
 
-import br.com.livreprogramacao.entity.base.EntityBase;
-import br.com.livreprogramacao.entity.marca.Marca;
-import br.com.livreprogramacao.entity.modelo.Modelo;
+import br.com.livreprogramacao.base.entity.EntityBase;
+import br.com.livreprogramacao.marca.entity.Marca;
+import br.com.livreprogramacao.modelo.entity.Modelo;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;

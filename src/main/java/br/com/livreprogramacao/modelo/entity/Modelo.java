@@ -1,6 +1,6 @@
-package br.com.livreprogramacao.entity.marca;
+package br.com.livreprogramacao.modelo.entity;
 
-import br.com.livreprogramacao.entity.base.EntityBase;
+import br.com.livreprogramacao.base.entity.EntityBase;
 import javax.persistence.Entity;
 
 /**
@@ -8,21 +8,21 @@ import javax.persistence.Entity;
  * @author user
  */
 @Entity
-public class Marca extends EntityBase {
+public class Modelo extends EntityBase {
 
     private String nome;
 
-    public Marca() {
+    public Modelo() {
     }
 
-    public Marca(final Long _id, final String nome) {
+    public Modelo(final Long _id, final String nome) {
         super(_id);
         this.nome = nome;
     }
 
     @Override
     public String toString() {
-        return "Marca{" + "nome=" + nome + '}';
+        return "Modelo{" + "nome=" + nome + '}';
     }
 
     public String getNome() {

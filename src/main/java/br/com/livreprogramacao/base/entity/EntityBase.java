@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.entity.base;
+package br.com.livreprogramacao.base.entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;

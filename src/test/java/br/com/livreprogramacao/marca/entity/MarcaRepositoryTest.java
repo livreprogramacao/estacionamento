@@ -1,6 +1,5 @@
 package br.com.livreprogramacao.marca.entity;
 
-import br.com.livreprogramacao.entity.marca.Marca;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;

@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.marca.repository;
 
-import br.com.livreprogramacao.entity.marca.Marca;
+import br.com.livreprogramacao.marca.entity.Marca;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
