@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.resources.modelo;
+package br.com.livreprogramacao.modelo.resources;
 
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
 import br.com.livreprogramacao.modelo.entity.Modelo;

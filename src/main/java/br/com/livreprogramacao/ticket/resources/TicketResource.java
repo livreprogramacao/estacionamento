@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.resource.ticket;
+package br.com.livreprogramacao.ticket.resources;
 
 import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
 import br.com.livreprogramacao.ticket.entity.Ticket;
