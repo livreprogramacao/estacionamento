@@ -7,9 +7,9 @@
 
         <jta-data-source>java:/DefaultDS</jta-data-source>
 
-        <class>br.com.livreprogramacao.entity.ticket.Ticket</class>
-        <class>br.com.livreprogramacao.entity.marca.Marca</class>
-        <class>br.com.livreprogramacao.entity.modelo.Modelo</class>
+        <class>br.com.livreprogramacao.ticket.entity.Ticket</class>
+        <class>br.com.livreprogramacao.marca.entity.Marca</class>
+        <class>br.com.livreprogramacao.modelo.entity.Modelo</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action"

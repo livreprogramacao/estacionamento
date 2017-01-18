@@ -22,7 +22,7 @@ public class Marca extends EntityBase {
 
     @Override
     public String toString() {
-        return "Marca{" + "nome=" + nome + '}';
+        return "Marca{" + "id=" + this.getId() + ", nome=" + nome + '}';
     }
 
     public String getNome() {

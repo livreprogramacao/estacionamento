@@ -1,5 +1,6 @@
 package br.com.livreprogramacao.marca.entity;
 
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.persistence.EntityManager;
@@ -45,4 +46,17 @@ public class MarcaRepositoryTest {
         tx.commit();
     }
 
+    @Test
+    public void marcaListAllTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        
+        tx.begin();
+        List<Marca> marcas = em.createQuery("SELECT m FROM Marca m").getResultList();
+        for (Marca marca : marcas) {
+            System.out.println("Marca: " + marca);
+        }
+        tx.commit();
+    }
 }
