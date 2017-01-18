@@ -1,5 +1,6 @@
-package br.com.livreprogramacao.marca.entity;
+package br.com.livreprogramacao.marca.repository;
 
+import br.com.livreprogramacao.marca.entity.Marca;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +36,7 @@ public class MarcaRepositoryTest {
         }
     }
 
-    @Test
+    /*@Test
     public void marcaCreateNewResourceTest() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
         EntityManager em = emf.createEntityManager();
@@ -44,10 +45,10 @@ public class MarcaRepositoryTest {
         tx.begin();
         em.persist(new Marca(100L, "MarcaIndefinida!"));
         tx.commit();
-    }
+    }*/
 
     @Test
-    public void marcaListAllTest() {
+    public void testListAllMarca() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();

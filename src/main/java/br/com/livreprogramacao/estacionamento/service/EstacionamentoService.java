@@ -25,12 +25,12 @@ public class EstacionamentoService {
 
         Long modeloId = 1L;
         String nomeModelo = "Blazer";
-        Modelo blazer = new Modelo(modeloId, nomeModelo);
+        Modelo blazer = new Modelo(modeloId, chevrolet, nomeModelo);
         modeloCollection.add(blazer);
 
         Long ticketId = 1L;
         String placa = "HJK-7858";
-        Ticket ticketBlazer = new Ticket(ticketId, chevrolet, blazer, placa);
+        Ticket ticketBlazer = new Ticket(ticketId, blazer, placa);
         ticketCollection.add(ticketBlazer);
 
     }

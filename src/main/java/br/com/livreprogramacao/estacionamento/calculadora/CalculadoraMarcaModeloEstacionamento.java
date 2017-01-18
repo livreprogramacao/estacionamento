@@ -8,7 +8,7 @@ public class CalculadoraMarcaModeloEstacionamento implements CalculadoraEstacion
 
     @Override
     public Integer resultado(Ticket ticket) {
-        return calcularValorPorMarcaModelo(ticket.getMarca(), ticket.getModelo());
+        return calcularValorPorMarcaModelo(ticket.getModelo().getMarca(), ticket.getModelo());
     }
 
     public Integer calcularValorPorMarcaModelo(Marca marca, Modelo modelo) {

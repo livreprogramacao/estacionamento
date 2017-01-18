@@ -3,6 +3,7 @@ package br.com.livreprogramacao.ticket.entity;
 import br.com.livreprogramacao.base.entity.EntityBase;
 import br.com.livreprogramacao.marca.entity.Marca;
 import br.com.livreprogramacao.modelo.entity.Modelo;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
@@ -16,11 +17,8 @@ import javax.validation.constraints.Size;
 @Entity
 public class Ticket extends EntityBase {
 
+    @Basic
     private String numero;
-
-    @NotNull(message = "Por gentileza, informe a Marca!")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Marca marca;
 
     @NotNull(message = "Por gentileza, informe o Modelo!")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
@@ -33,39 +31,30 @@ public class Ticket extends EntityBase {
     public Ticket() {
     }
 
-    public Ticket(Long id, Marca marca, Modelo modelo, String placa) {
-        this.id = id;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.placa = placa;
+    public Ticket(final Long _id, final Modelo _modelo, final String _placa) {
+        this.id = _id;
+        this.modelo = _modelo;
+        this.placa = _placa;
     }
 
     @Override
     public String toString() {
-        return "Ticket{" + "numero=" + numero + ", marca=" + marca + ", modelo=" + modelo + ", placa=" + placa + '}';
+        return "Ticket{" + "numero=" + numero + ", modelo=" + modelo + ", placa=" + placa + '}';
     }
 
     public String getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(final String numero) {
         this.numero = numero;
-    }
-
-    public Marca getMarca() {
-        return marca;
-    }
-
-    public void setMarca(Marca marca) {
-        this.marca = marca;
     }
 
     public Modelo getModelo() {
         return modelo;
     }
 
-    public void setModelo(Modelo modelo) {
+    public void setModelo(final Modelo modelo) {
         this.modelo = modelo;
     }
 
@@ -73,7 +62,7 @@ public class Ticket extends EntityBase {
         return placa;
     }
 
-    public void setPlaca(String placa) {
+    public void setPlaca(final String placa) {
         this.placa = placa;
     }
 
