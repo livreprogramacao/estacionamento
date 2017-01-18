@@ -48,7 +48,7 @@ public class MarcaRepositoryTest {
     }*/
 
     @Test
-    public void testListAllMarca() {
+    public void testListAllMarcas() {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
