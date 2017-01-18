@@ -21,7 +21,6 @@ quanto a entrada dos dados e a saída utilizaram Web Services.
 
 
 ### Configure Wildfly
-=====
 ```
 unzip  ~/Downloads/wildfly-10.1.0.Final.zip -d /home/user
 chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
