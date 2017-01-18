@@ -27,15 +27,15 @@ chmod a+x /home/user/wildfly-10.1.0.Final/bin/*.sh
 export JBOSS_HOME=/home/user/wildfly-10.1.0.Final
 $JBOSS_HOME/bin/add-user.sh admin admin
 ```
+=====
 
 #### Copy eclipseLink to modules
-===
 ```
 cp ~/Downloads/eclipselink.jar /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main
 ```
+===
 
 #### Edit module.xml
-===
 Open /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main/module.xml
 ```
     <resources>
@@ -47,37 +47,33 @@ Open /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/pers
         </resource-root>
     </resources>
 ```
+===
 
 #### Run JBoss
-====
 ```
 $JBOSS_HOME/bin/standalone.sh
 ```
+====
 
 ####  Add datasource via jboss-cli
-===
 ```
 $JBOSS_HOME/bin/jboss-cli.sh -c "deploy ~/Downloads/hsqldb.jar,data-source add --driver-name=hsqldb.jar --use-ccm=false --jta=false --user-name=sa --name=DefaultDS --jndi-name=java:/DefaultDS --connection-url=jdbc:hsqldb:\$\{jboss.server.data.dir\}\$\{/\}hypersonic\$\{/\}localDB;shutdown=true;sql.syntax_mys=true;"
 ```
+===
 
 #### Run maven:
+```
+wildfly-clean-install
+```
 ===
-```
-mvn clean install wildfly:deploy
-
-mvn package && cp target/api-estacionamento-rest.war ~/wildfly-10.1.0.Final/standalone/deployments/
-```
 
 
 #### Test the app:
+```
+curl -i http://localhost:8080/api-estacionamento-rest/estacionamentos/tickets
+curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/estacionamentos/tickets
+```
 ====
-```
-curl -i http://localhost:8080/api-estacionamento-rest/resources/calculadora
-```
-
-```
-curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/resources/calculadora
-```
 
 
 [Template Method in Java](https://sourcemaking.com/design_patterns/template_method/java/2)
