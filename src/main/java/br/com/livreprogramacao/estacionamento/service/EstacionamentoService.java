@@ -20,7 +20,7 @@ public class EstacionamentoService {
 
         Long marcaId = 1L;
         String nomeMarca = "Chevrolet";
-        Marca chevrolet = new Marca(marcaId, nomeMarca);
+        Marca chevrolet = new Marca(10001L, nomeMarca);
         marcaCollection.add(chevrolet);
 
         Long modeloId = 1L;

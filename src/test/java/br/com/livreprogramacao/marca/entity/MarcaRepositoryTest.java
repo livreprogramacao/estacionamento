@@ -35,16 +35,16 @@ public class MarcaRepositoryTest {
         }
     }
 
-//    @Test
-//    public void marcaCreateNewResourceTest() {
-//        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
-//        EntityManager em = emf.createEntityManager();
-//        EntityTransaction tx = em.getTransaction();
-//        
-//        tx.begin();
-//        em.persist(new Marca(-1L, "MarcaIndefinida!"));
-//        tx.commit();
-//    }
+    @Test
+    public void marcaCreateNewResourceTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        
+        tx.begin();
+        em.persist(new Marca(100L, "MarcaIndefinida!"));
+        tx.commit();
+    }
 
     @Test
     public void marcaListAllTest() {

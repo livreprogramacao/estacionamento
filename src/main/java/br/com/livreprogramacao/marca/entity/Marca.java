@@ -1,6 +1,7 @@
 package br.com.livreprogramacao.marca.entity;
 
 import br.com.livreprogramacao.base.entity.EntityBase;
+import javax.persistence.Basic;
 import javax.persistence.Entity;
 
 /**
@@ -10,6 +11,9 @@ import javax.persistence.Entity;
 @Entity
 public class Marca extends EntityBase {
 
+    private static final long serialVersionUID = 1L;
+    
+    @Basic
     private String nome;
 
     protected Marca() {}

@@ -15,6 +15,8 @@ import javax.persistence.Version;
  */
 @MappedSuperclass
 public abstract class EntityBase implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +28,8 @@ public abstract class EntityBase implements Serializable {
     @Version
     private Long version = 0L; // Field version cannot be final.
 
-    protected EntityBase() {}
+    protected EntityBase() {
+    }
 
     protected EntityBase(final Long _id) {
         this.id = _id;
@@ -65,6 +68,10 @@ public abstract class EntityBase implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getVersion() {
