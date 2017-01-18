@@ -12,8 +12,7 @@ public class Marca extends EntityBase {
 
     private String nome;
 
-    public Marca() {
-    }
+    protected Marca() {}
 
     public Marca(final Long _id, final String nome) {
         super(_id);

@@ -1,8 +1,3 @@
-/**
- * Author:  user
- * Created: Jan 1, 2017
- */
-
 INSERT INTO marca (id, nome) VALUES (1,'FIAT')
 INSERT INTO marca (id, nome) VALUES (2,'FORD')
 INSERT INTO marca (id, nome) VALUES (3,'GM')
