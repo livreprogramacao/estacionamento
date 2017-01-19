@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.ticket.entity;
 
-import br.com.livreprogramacao.base.entity.EntityBase;
+import br.com.livreprogramacao.jee.jpa.entity.EntityBase;
 import br.com.livreprogramacao.marca.entity.Marca;
 import br.com.livreprogramacao.modelo.entity.Modelo;
 import javax.persistence.Basic;

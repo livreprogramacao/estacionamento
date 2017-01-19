@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.modelo.entity;
 
-import br.com.livreprogramacao.base.entity.EntityBase;
+import br.com.livreprogramacao.jee.jpa.entity.EntityBase;
 import br.com.livreprogramacao.marca.entity.Marca;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
