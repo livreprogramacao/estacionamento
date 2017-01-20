@@ -1,5 +1,6 @@
 package br.com.livreprogramacao.modelo.repository;
 
+import br.com.livreprogramacao.marca.entity.Marca;
 import br.com.livreprogramacao.modelo.entity.Modelo;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -15,6 +16,19 @@ import org.junit.Test;
 public class ModeloRepositoryTest {
 
     private static final String PU_NAME = "hsqldb";
+
+    @Test
+    public void modeloCreateTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        Marca marca = new Marca(1L, "");
+
+        tx.begin();
+        em.persist(new Modelo(1L, marca, "PLC-1234"));
+        tx.commit();
+    }
 
     @Test
     public void testListAllModelos() {
