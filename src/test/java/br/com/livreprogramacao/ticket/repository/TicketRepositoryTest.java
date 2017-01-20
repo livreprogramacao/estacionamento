@@ -23,8 +23,10 @@ public class TicketRepositoryTest {
         EntityTransaction tx = em.getTransaction();
 
         tx.begin();
-        List<Ticket> l = em.createQuery("SELECT t FROM Ticket t").getResultList();
-        l.forEach(System.out::println);
+        List<Ticket> tickets = em.createQuery("SELECT t FROM Ticket t").getResultList();
+        for (Ticket t : tickets) {
+            System.out.println("Ticket: " + t);
+        }
         tx.commit();
     }
 }

@@ -21,13 +21,14 @@ import org.junit.Test;
  */
 public class MarcaRepositoryTest {
 
-    protected static final String DRIVER_CLASS_NAME = "org.hsqldb.jdbcDriver";
-    protected static final String PU_NAME = "hsqldb";
+    private static final String DRIVER_CLASS_NAME = "org.hsqldb.jdbcDriver";
+    private static final String PERSISTENCE = "META-INF/persistence.xml";
+    private static final String PU_NAME = "hsqldb";
 
-    protected static EntityManagerFactory emf;
-    protected static EntityManager em;
+    private static EntityManagerFactory emf;
+    private static EntityManager em;
 
-    protected EntityTransaction tx;
+    EntityTransaction tx;
 
     @BeforeClass
     public static void setupClass() {
@@ -36,26 +37,17 @@ public class MarcaRepositoryTest {
         em = emf.createEntityManager();
     }
 
+    @Before
+    public void setupMethod() {
+        System.out.println("Setup method... ");
+        tx = em.getTransaction();
+    }
+
     @AfterClass
     public static void tearDownClass() {
         System.out.println("Class tear down... ");
         em.close();
         emf.close();
-    }
-
-    @Test
-    public void checkThereIsDriverClassNameTest() {
-        try {
-            assertTrue("HSQLDB Class", getClass().forName(DRIVER_CLASS_NAME) != null);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(MarcaRepositoryTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @Before
-    public void setupMethod() {
-        System.out.println("Setup method... ");
-        tx = em.getTransaction();
     }
 
     @After
@@ -66,20 +58,41 @@ public class MarcaRepositoryTest {
         }
     }
 
+//    @Test
+//    public void checkThereIsPersistenceTest() {
+//        assertTrue("Not Found Persistence.xml file", getClass().getResource(PERSISTENCE) != null);
+//    }
+    
     @Test
+    public void checkThereIsDriverClassNameTest() {
+        try {
+            assertTrue("HSQLDB Class", getClass().forName(DRIVER_CLASS_NAME) != null);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MarcaRepositoryTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    /*@Test
     public void marcaCreateNewResourceTest() {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        
         tx.begin();
         em.persist(new Marca(100L, "MarcaIndefinida!"));
         tx.commit();
-    }
-
+    }*/
     @Test
     public void testListAllMarcas() {
+//        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PU_NAME);
+//        EntityManager em = emf.createEntityManager();
+//        EntityTransaction tx = em.getTransaction();
 
         tx.begin();
-        List<Marca> l = em.createQuery("SELECT m FROM Marca m").getResultList();
-        l.forEach(System.out::println);
+        List<Marca> marcas = em.createQuery("SELECT m FROM Marca m").getResultList();
+        for (Marca marca : marcas) {
+            System.out.println("Marca: " + marca);
+        }
         tx.commit();
-
     }
 }

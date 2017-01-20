@@ -37,8 +37,10 @@ public class ModeloRepositoryTest {
         EntityTransaction tx = em.getTransaction();
 
         tx.begin();
-        List<Modelo> l = em.createQuery("SELECT m FROM Modelo m").getResultList();
-        l.forEach(System.out::println);
+        List<Modelo> modelos = em.createQuery("SELECT m FROM Modelo m").getResultList();
+        for (Modelo m : modelos) {
+            System.out.println("Modelo: " + m);
+        }
         tx.commit();
     }
 }
