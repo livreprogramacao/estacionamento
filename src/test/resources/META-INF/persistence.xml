@@ -14,12 +14,25 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:/tmp/hypersonic/testdb2;shutdown=true;sql.syntax_mys=true;"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
 
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
             <property name="javax.persistence.schema-generation.create-source" value="script"/>
             <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create.sql" />
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
             <property name="javax.persistence.schema-generation.drop-source" value="script" />
             <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop.sql" />
             <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/data.sql" />
+
+            <!--
+            EclipseLink/Examples/JPA/Logging - How to configure logging
+            https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging#How_To_Configure_Logging
+            -->
+            <property name="eclipselink.logging.file" value="/tmp/eclipselink-output.log"/>
+            <property name="eclipselink.logging.level" value="ALL" /> <!-- Log Level Configuration - OFF, SEVERE, WARNING, INFO, CONFIG, FINE, FINER, FINEST, ALL -->
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="javax.persistence.jdbc.show_sql" value="true" />
+            <property name="eclipselink.logging.session" value="true"/>
+            <property name="eclipselink.logging.thread" value="false"/>
+            <property name="eclipselink.logging.exceptions" value="true"/>
+
         </properties>
 
     </persistence-unit>
