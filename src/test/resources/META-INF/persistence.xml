@@ -11,7 +11,7 @@
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:/tmp/hypersonic/testdb2;shutdown=true;sql.syntax_mys=true;"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:/tmp/test-db/hsqldb;shutdown=true;sql.syntax_mys=true;"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
 
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create" />
