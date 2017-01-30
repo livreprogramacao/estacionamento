@@ -47,6 +47,12 @@ Open /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/pers
         </resource-root>
     </resources>
 ```
+
+#### Adding missing module dependency into modules/system/layers/base/org/eclipse/persistence/main/module.xml:
+
+```
+<module name="javax.ws.rs.api"/>
+```
 ===
 
 #### Run JBoss
