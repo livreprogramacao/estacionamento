@@ -1,3 +1,33 @@
+java.lang.ClassNotFoundException: org.jipijapa.eclipselink.JBossArchiveFactoryImpl
+---
+	Solution:
+	<dependency>
+	    <groupId>org.wildfly</groupId>
+	    <artifactId>jipijapa-eclipselink</artifactId>
+	    <version>10.0.0.CR2</version>
+	</dependency>
+
+
+java.lang.ClassNotFoundException: org.jipijapa.eclipselink.JBossArchiveFactoryImpl from 
+[
+Module \"deployment.api-estacionamento-rest.war:main\" from Service Module Loader
+] 
+occured while trying to instantiate user-specified ArchiveFactory: org.jipijapa.eclipselink.JBossArchiveFactoryImpl.
+
+
+Required services that are not installed:" => ["jboss.naming.context.java.DefaultDS"]
+---
+WFLYCTL0013: Operation ("deploy") failed - address: ([("deployment" => "api-estacionamento-rest.war")]) - failure description: {
+    "WFLYCTL0412: Required services that are not installed:" => ["jboss.naming.context.java.DefaultDS"],
+    "WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.persistenceunit.\"api-estacionamento-rest.war#default\" is missing [jboss.naming.context.java.DefaultDS]"]
+}
+11:38:12,551 ERROR [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0021: Deploy of deployment "api-estacionamento-rest.war" was rolled back with the following failure message: 
+{
+    "WFLYCTL0412: Required services that are not installed:" => ["jboss.naming.context.java.DefaultDS"],
+    "WFLYCTL0180: Services with missing/unavailable dependencies" => ["jboss.persistenceunit.\"api-estacionamento-rest.war#default\" is missing [jboss.naming.context.java.DefaultDS]"]
+
+
+
 Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.019 sec <<< FAILURE! - in br.com.livreprogramacao.marca.repository.MarcaRepositoryTest
 marcaCreateNewResourceTest(br.com.livreprogramacao.marca.repository.MarcaRepositoryTest)  Time elapsed: 0.013 sec  <<< ERROR!
 javax.persistence.RollbackException: 
