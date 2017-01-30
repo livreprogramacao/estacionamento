@@ -76,9 +76,10 @@ wildfly-clean-install
 
 #### Test the app:
 ```
+curl -i http://localhost:8080/api-estacionamento-rest/estacionamento/modelos
+curl -i http://localhost:8080/api-estacionamento-rest/estacionamento/marcas
 curl -i http://localhost:8080/api-estacionamento-rest/estacionamento/tickets
 
-curl -i http://localhost:8080/api-estacionamento-rest/estacionamento/modelos
 
 curl -i -H "Content-Type: application/json" -X POST -d '{"marca":"FORD","modelo":"RANGER","placa":"sxyz2017"}' http://localhost:8080/api-estacionamento-rest/estacionamentos/tickets
 ```
