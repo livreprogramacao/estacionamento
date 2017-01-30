@@ -29,7 +29,9 @@ $JBOSS_HOME/bin/add-user.sh admin admin
 ```
 =====
 
-#### Copy eclipseLink to modules
+#### [Using EclipseLink](https://docs.jboss.org/author/display/WFLY8/JPA+Reference+Guide#JPAReferenceGuide-UsingEclipseLink)
+Copy eclipseLink to modules:
+
 ```
 cp ~/Downloads/eclipselink.jar /home/user/wildfly-10.1.0.Final/modules/system/layers/base/org/eclipse/persistence/main
 ```
