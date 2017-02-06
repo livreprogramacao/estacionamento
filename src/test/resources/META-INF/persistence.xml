@@ -5,9 +5,9 @@
 
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
-        <class>br.com.livreprogramacao.ticket.entity.Ticket</class>
-        <class>br.com.livreprogramacao.marca.entity.Marca</class>
-        <class>br.com.livreprogramacao.modelo.entity.Modelo</class>
+        <class>br.com.livreprogramacao.estacionamento.ticket.entity.Ticket</class>
+        <class>br.com.livreprogramacao.estacionamento.marca.entity.Marca</class>
+        <class>br.com.livreprogramacao.estacionamento.modelo.entity.Modelo</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
