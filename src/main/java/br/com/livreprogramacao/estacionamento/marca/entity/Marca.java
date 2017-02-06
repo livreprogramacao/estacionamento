@@ -1,6 +1,6 @@
-package br.com.livreprogramacao.marca.entity;
+package br.com.livreprogramacao.estacionamento.marca.entity;
 
-import br.com.livreprogramacao.jee.jpa.entity.EntityBase;
+import br.com.livreprogramacao.estacionamento.jee.jpa.entity.EntityBase;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 

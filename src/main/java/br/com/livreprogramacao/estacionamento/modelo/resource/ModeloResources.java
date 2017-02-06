@@ -1,7 +1,7 @@
-package br.com.livreprogramacao.modelo.resources;
+package br.com.livreprogramacao.estacionamento.modelo.resource;
 
-import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
-import br.com.livreprogramacao.modelo.entity.Modelo;
+import br.com.livreprogramacao.estacionamento.calculadora.service.EstacionamentoService;
+import br.com.livreprogramacao.estacionamento.modelo.entity.Modelo;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;

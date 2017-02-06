@@ -1,6 +1,6 @@
-package br.com.livreprogramacao.marca.repository;
+package br.com.livreprogramacao.estacionamento.marca.repository;
 
-import br.com.livreprogramacao.marca.entity.Marca;
+import br.com.livreprogramacao.estacionamento.marca.entity.Marca;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -37,7 +37,7 @@ public class MarcaRepository {
         }
     }
 
-    private Marca findById(Long marcaId) {
+    private Marca findById(final Long marcaId) {
         return em.find(Marca.class, marcaId);
     }
 }

@@ -1,18 +1,18 @@
-package br.com.livreprogramacao.ticket.resources;
+package br.com.livreprogramacao.estacionamento.ticket.resource;
 
-import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
-import br.com.livreprogramacao.ticket.entity.Ticket;
-import javax.validation.Valid;
+import br.com.livreprogramacao.estacionamento.calculadora.service.EstacionamentoService;
+import br.com.livreprogramacao.estacionamento.ticket.entity.Ticket;
 import java.util.List;
-import javax.ws.rs.Produces;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.core.MediaType;
 import javax.inject.Inject;
+import javax.validation.Valid;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Implementa as regras de negócios do estacionamento.
@@ -28,7 +28,7 @@ public class TicketResource {
     EstacionamentoService service;
 
     @GET
-    public List<Ticket> getTicket() {
+    public List<Ticket> get() {
         return service.getTickets();
     }
 

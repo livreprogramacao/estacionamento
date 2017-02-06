@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.marca.repository;
 
-import br.com.livreprogramacao.marca.entity.Marca;
+import br.com.livreprogramacao.estacionamento.marca.entity.Marca;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

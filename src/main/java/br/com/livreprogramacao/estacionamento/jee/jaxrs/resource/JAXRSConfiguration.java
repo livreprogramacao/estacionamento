@@ -1,4 +1,4 @@
-package br.com.livreprogramacao.estacionamento.resources;
+package br.com.livreprogramacao.estacionamento.jee.jaxrs.resource;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -8,7 +8,7 @@ import javax.ws.rs.core.Application;
  *
  * @author Fabio Santos Almeida livre.programacao at gmail.com
  */
-@ApplicationPath("estacionamento")
+@ApplicationPath("resources")
 public class JAXRSConfiguration extends Application {
 
 }

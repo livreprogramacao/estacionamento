@@ -1,8 +1,8 @@
 package br.com.livreprogramacao.estacionamento.calculadora;
 
-import br.com.livreprogramacao.marca.entity.Marca;
-import br.com.livreprogramacao.modelo.entity.Modelo;
-import br.com.livreprogramacao.ticket.entity.Ticket;
+import br.com.livreprogramacao.estacionamento.marca.entity.Marca;
+import br.com.livreprogramacao.estacionamento.modelo.entity.Modelo;
+import br.com.livreprogramacao.estacionamento.ticket.entity.Ticket;
 
 public class CalculadoraMarcaModeloEstacionamento implements CalculadoraEstacionamento {
 

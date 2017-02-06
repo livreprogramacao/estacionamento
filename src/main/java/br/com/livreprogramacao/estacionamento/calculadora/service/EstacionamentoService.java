@@ -1,12 +1,12 @@
-package br.com.livreprogramacao.estacionamento.service;
+package br.com.livreprogramacao.estacionamento.calculadora.service;
 
 import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraMarcaEstacionamento;
 import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraMarcaModeloEstacionamento;
 import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraOutrosEstacionamento;
 import br.com.livreprogramacao.estacionamento.calculadora.CalculadoraPlacaB99Estacionamento;
-import br.com.livreprogramacao.marca.entity.Marca;
-import br.com.livreprogramacao.modelo.entity.Modelo;
-import br.com.livreprogramacao.ticket.entity.Ticket;
+import br.com.livreprogramacao.estacionamento.marca.entity.Marca;
+import br.com.livreprogramacao.estacionamento.modelo.entity.Modelo;
+import br.com.livreprogramacao.estacionamento.ticket.entity.Ticket;
 import java.util.ArrayList;
 import java.util.List;
 

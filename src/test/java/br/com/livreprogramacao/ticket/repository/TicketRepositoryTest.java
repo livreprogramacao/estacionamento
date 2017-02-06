@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.ticket.repository;
 
-import br.com.livreprogramacao.ticket.entity.Ticket;
+import br.com.livreprogramacao.estacionamento.ticket.entity.Ticket;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

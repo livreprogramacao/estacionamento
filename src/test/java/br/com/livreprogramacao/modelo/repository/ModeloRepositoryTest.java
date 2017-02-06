@@ -1,6 +1,6 @@
 package br.com.livreprogramacao.modelo.repository;
 
-import br.com.livreprogramacao.modelo.entity.Modelo;
+import br.com.livreprogramacao.estacionamento.modelo.entity.Modelo;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

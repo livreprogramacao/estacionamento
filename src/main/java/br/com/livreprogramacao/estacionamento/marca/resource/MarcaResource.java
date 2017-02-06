@@ -1,7 +1,7 @@
-package br.com.livreprogramacao.marca.resources;
+package br.com.livreprogramacao.estacionamento.marca.resource;
 
-import br.com.livreprogramacao.estacionamento.service.EstacionamentoService;
-import br.com.livreprogramacao.marca.entity.Marca;
+import br.com.livreprogramacao.estacionamento.calculadora.service.EstacionamentoService;
+import br.com.livreprogramacao.estacionamento.marca.entity.Marca;
 import java.util.List;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 @Path("marcas")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class MarcaResources {
+public class MarcaResource {
     
     @Inject
     EstacionamentoService service;
